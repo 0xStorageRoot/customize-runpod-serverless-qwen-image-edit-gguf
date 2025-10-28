@@ -8,7 +8,7 @@ RUN comfy-node-install ComfyUI-GGUF
 RUN comfy model download --url https://huggingface.co/QuantStack/Qwen-Image-Edit-GGUF/resolve/main/Qwen_Image_Edit-Q6_K.gguf --relative-path models/diffusion_models --filename Qwen_Image_Edit-Q6_K.gguf
 
 # 下载 VAE 模型文件 (254 MB)
-RUN comfy model download --url https://huggingface.co/Qwen/Qwen-Image-Edit/resolve/main/vae/diffusion_pytorch_model.safetensors --relative-path models/vae --filename qwen_image_edit_vae.safetensors
+RUN comfy model download --url https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/blob/main/split_files/vae/qwen_image_vae.safetensors --relative-path models/vae --filename qwen_image_edit_vae.safetensors
 
 # 下载 Text Encoder 模型文件
 RUN comfy model download --url https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors --relative-path models/text_encoders --filename qwen_2.5_vl_7b_fp8_scaled.safetensors
